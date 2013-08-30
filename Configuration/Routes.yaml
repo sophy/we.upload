@@ -1,14 +1,6 @@
 -
   name: 'Standard'
-  uriPattern:    'standard(/{@action})'
-  defaults:
-    '@package':    'We.Upload'
-    '@controller': 'Standard'
-    '@action':     'index'
-    '@format':     'html'
--
-  name: 'Standard'
-  uriPattern:    '(standard)'
+  uriPattern:    'upload(/{@action})'
   defaults:
     '@package':    'We.Upload'
     '@controller': 'Standard'
