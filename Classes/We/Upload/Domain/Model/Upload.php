@@ -19,7 +19,7 @@ class Upload {
 	 * @Flow\Validate(type="NotEmpty")
 	 * @ORM\Column(type="string", unique=true)
 	 */
-	protected $name;
+	protected $title;
 
 	/**
 	 * @var string
@@ -71,16 +71,16 @@ class Upload {
 	/**
 	 * @return string
 	 */
-	public function getName() {
-		return $this->name;
+	public function getTitle() {
+		return $this->title;
 	}
 
 	/**
-	 * @param string $name
+	 * @param string $title
 	 * @return void
 	 */
-	public function setName($name) {
-		$this->name = $name;
+	public function setName($title) {
+		$this->title = $title;
 	}
 
 	/**
