@@ -1,0 +1,17 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit File Upload</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{upload}" name="upload">
+		<div class="form-group">
+			<label for="title"><f:translate id="label.field.upload.title" /></label>
+			<f:form.textfield property="title" id="title" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label for="description"><f:translate id="label.field.upload.description" /></label>
+			<f:form.textarea property="description" id="description" class="form-control" rows="3" cols="50" placeholder="Enter description here" />
+		</div>
+		<f:form.button class="btn btn-primary"><f:translate id="label.upload.update" /></f:form.button>
+	</f:form>
+</f:section>
