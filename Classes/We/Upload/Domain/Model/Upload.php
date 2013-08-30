@@ -64,6 +64,7 @@ class Upload {
 
 	/**
 	 * @var \DateTime
+	 * @ORM\Column(nullable=true)
 	 */
 	protected $modified;
 
