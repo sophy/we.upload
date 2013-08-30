@@ -1,0 +1,26 @@
+#                                                                #
+# Settings Configuration for the Chantrea.Training package       #
+#                                                                #
+
+TYPO3:
+  Flow:
+    security:
+      authentication:
+        authenticationStrategy: oneToken
+        providers:
+          DefaultProvider:
+            provider: 'PersistedUsernamePasswordProvider'
+            entryPoint: 'WebRedirect'
+            entryPointOptions:
+              uri: 'login'
+
+Chantrea:
+  Training:
+    limit: 10
+    dateFormat: 'm/d/Y'
+    dateTimeFormat: 'm/d/Y H:i'
+    statusOptions:
+      new: 'New'
+      accepted: 'Accepted'
+      rejected: 'Rejected'
+      scheduled: 'Scheduled'
