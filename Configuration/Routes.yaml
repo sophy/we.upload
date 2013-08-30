@@ -1,8 +1,29 @@
 -
-  name: 'Standard'
+  name: 'Upload list action'
   uriPattern:    'upload(/{@action})'
   defaults:
     '@package':    'We.Upload'
-    '@controller': 'Standard'
+    '@controller': 'Upload'
     '@action':     'index'
     '@format':     'html'
+
+-
+  name: 'Upload list action'
+  uriPattern: 'uploads'
+  defaults:
+    '@controller': 'Upload'
+    '@action':     'index'
+
+-
+  name: 'Upload actions'
+  uriPattern: 'upload/new'
+  defaults:
+    '@controller': 'Upload'
+    '@action':     'new'
+
+-
+  name: 'Upload actions'
+  uriPattern: 'upload/{@action}/{upload}'
+  defaults:
+    '@controller': 'Upload'
+    '@action':     'show'
