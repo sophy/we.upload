@@ -1,4 +1,4 @@
 we.upload
 =========
 
-Drag and Drop upload TYPO3 Flow Package  for Innovation day
+Drag and Drop upload TYPO3 Flow Package  for Innovation day.
