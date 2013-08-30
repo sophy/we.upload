@@ -1,6 +1,6 @@
 <f:layout name="Default" />
 
-<f:section name="Title">Index view of Upload controller</f:section>
+<f:section name="Title"><f:translate id="label.upload.header" /></f:section>
 
 <f:section name="Content">
 	<f:if condition="uploads">
@@ -15,19 +15,19 @@
 				</tr>
 			</thead>
 			<tbody>
-			<f:for each="uploads" as="fileUpload">
+			<f:for each="{uploads}" as="fileUpload">
 				<tr>
-					<td>{fileUpload.path}</td>
+					<td><img src="{fileUpload.path}" alt="" /></td>
 					<td>{fileUpload.title}</td>
 					<td>{fileUpload.description}</td>
 					<td>
 						<f:link.action action="edit" controller="Upload" arguments="{upload: fileUpload}">
-							<i class="icon-pencil"></i>
+							<span class="glyphicon glyphicon-pencil"></span>
 						</f:link.action>
 					</td>
 					<td>
 						<f:link.action action="delete" controller="Upload" arguments="{upload: fileUpload}">
-							<i class="icon-trash" onclick="return confirm('Are you sure you want to delete?')"></i>
+							<span class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure you want to delete?')"></span>
 						</f:link.action>
 					</td>
 				</tr>

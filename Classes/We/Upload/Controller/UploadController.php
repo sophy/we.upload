@@ -42,6 +42,40 @@ class UploadController extends ActionController {
 		$this->view->assign('upload', $upload);
 	}
 
+	/**
+	 * Shows a form for editing an existing upload object
+	 *
+	 * @param \We\Upload\Domain\Model\Upload $upload The upload to edit
+	 *
+	 * @return void
+	 */
+	public function editAction(Upload $upload) {
+		$this->view->assign('upload', $upload);
+	}
+
+	/**
+	 * Updates the given file upload object
+	 *
+	 * @param \We\Upload\Domain\Model\Upload $upload The upload to update
+	 * @return void
+	 */
+	public function updateAction(Upload $upload) {
+		$this->uploadRepository->update($upload);
+		$this->addFlashMessage('Updated the file upload.');
+		$this->redirect('upload', 'Index');
+	}
+
+	/**
+	 * Removes the given upload object from the upload repository
+	 *
+	 * @param \We\Upload\Domain\Model\Upload $upload The upload to delete
+	 * @return void
+	 */
+	public function deleteAction(Upload $upload) {
+		$this->uploadRepository->remove($upload);
+		$this->addFlashMessage('Deleted a file upload.');
+		$this->redirect('upload', 'Index');
+	}
 
 }
 

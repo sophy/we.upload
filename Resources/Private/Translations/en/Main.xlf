@@ -42,6 +42,9 @@
 			<trans-unit id="label.upload.edit">
 				<source>Edit</source>
 			</trans-unit>
+			<trans-unit id="label.upload.update">
+				<source>Update</source>
+			</trans-unit>
 			<trans-unit id="label.upload.delete">
 				<source>Delete</source>
 			</trans-unit>
